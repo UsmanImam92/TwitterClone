@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+
+
   # the get maps request for the URL /static_pages/home,help,about,contact.
   # When we generate a home,help,about,contact action inside the StaticPages
   # controller we automatically get a page at the address /static_pages/home,about..
@@ -12,19 +14,16 @@ Rails.application.routes.draw do
   # and then renders the view home.html.erb
 
   # request for / to be routed to the home action in Static Pages Controller
+
   root 'static_pages#home'
 
-  get 'static_pages/home'
+  get  'home' => 'static_pages#home'
+  get  'help' => 'static_pages#help'
+  get  'about' => 'static_pages#about'
+  get  'contact' => 'static_pages#contact'
+  get  'terms' => 'static_pages#terms'
 
-  get 'static_pages/help'
-
-  get 'static_pages/about'
-
-  get 'static_pages/contact'
-
-  get 'static_pages/terms'
-
-
+  get  'signup' => 'users#signup'
 
 
 end

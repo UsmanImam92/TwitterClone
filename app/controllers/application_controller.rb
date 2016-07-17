@@ -7,8 +7,4 @@ class ApplicationController < ActionController::Base
   # the controller includes actions that are needed upon Get Request.
 
 
-  def hello
-    render html: "Jeelo"
-  end
-
 end
